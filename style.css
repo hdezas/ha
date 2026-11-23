@@ -1,0 +1,291 @@
+/* =====================================================
+   PALETA
+   ===================================================== */
+:root {
+    --paleta-azul-oscuro: #120f71;
+    --paleta-naranja:     #fc7108;
+    --paleta-verde:       #4fbb34;
+    --paleta-rojo:        #98072a;
+    --comp-azul-claro:    #118af4;
+    --comp-amarillo:      #fcb005;
+    --comp-verde-claro:   #b2da3c;
+}
+
+/* =====================================================
+   BASE
+   ===================================================== */
+body {
+    background-color: #000 !important;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.text-naranja { color: var(--paleta-naranja) !important; }
+
+/* Botones personalizados */
+.btn-custom-primary {
+    background-color: var(--comp-azul-claro);
+    color: #fff;
+    border: none;
+}
+.btn-custom-primary:hover {
+    background-color: var(--paleta-azul-oscuro);
+    color: #fff;
+}
+.btn-custom-outline {
+    border: 1px solid var(--comp-amarillo);
+    color: var(--comp-amarillo);
+    background: transparent;
+}
+.btn-custom-outline:hover {
+    background-color: var(--comp-amarillo);
+    color: #000;
+}
+
+/* Nav pills activas en naranja */
+.nav-pills .nav-link.active {
+    background-color: var(--paleta-naranja) !important;
+    color: #000 !important;
+}
+
+/* =====================================================
+   HERO
+   ===================================================== */
+.hero {
+    position: relative;
+    min-height: 92vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.hero-imagen {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.85));
+    z-index: 1;
+}
+.hero-contenido {
+    position: relative;
+    z-index: 2;
+}
+
+/* =====================================================
+   VINILOS
+   ===================================================== */
+.contenedor-vinilo {
+    position: relative;
+    display: block;
+    width: 260px;
+    height: 260px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.portada {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.55);
+    overflow: hidden;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+.img-portada {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+.etiqueta-portada {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    padding: 8px 12px;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+.img-vinilo {
+    position: absolute;
+    top: 5%; left: 5%;
+    width: 90%;
+    height: 90%;
+    z-index: 1;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #ffffff;
+    transition: left 0.6s ease-in-out;
+}
+.contenedor-vinilo:hover .img-vinilo,
+.contenedor-vinilo:focus .img-vinilo {
+    left: 140px;
+    animation: girar 6s linear infinite;
+}
+.contenedor-vinilo:hover .portada {
+    transform: translateY(-4px);
+}
+@keyframes girar {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+/* =====================================================
+   CARRUSEL CORREGIDO PARA MODALES
+   ===================================================== */
+.carrusel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #0a0a0a;
+    width: 100%;
+}
+.carrusel-pista {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+.carrusel-pista img {
+    flex: 0 0 100%;
+    width: 100%;
+    height: auto;             /* Antes era 420px y rompía el modal */
+    max-height: 65vh;         /* Se adapta al tamaño de la pantalla */
+    object-fit: contain;      /* Muestra toda la imagen sin recortarla */
+    display: block;
+    background: #000;
+}
+.carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    border: 1px solid #666;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    z-index: 10;              /* Asegura que estén por encima de la imagen */
+}
+.carrusel-btn:hover {
+    background: var(--paleta-naranja);
+    color: #000;
+    border-color: var(--paleta-naranja);
+}
+.carrusel-btn.prev { left: 15px; }
+.carrusel-btn.next { right: 15px; }
+
+/* =====================================================
+   TARJETAS
+   ===================================================== */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+@media (max-width: 768px) {
+    .contenedor-vinilo { width: 220px; height: 220px; }
+    .contenedor-vinilo:hover .img-vinilo { left: 110px; }
+    .hero { min-height: 80vh; }
+    .hero h1 { font-size: 2.2rem; }
+    .carrusel-pista img { max-height: 40vh; } /* Más pequeño en móviles */
+}
+
+/* =====================================================
+   SOBRE MÍ (Fondo)
+   ===================================================== */
+.seccion-con-fondo {
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+}
+.seccion-con-fondo-imagen {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.25;
+    filter: blur(3px);
+    z-index: 0;
+}
+.seccion-con-fondo-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.9));
+    z-index: 1;
+}
+.seccion-con-fondo .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* =====================================================
+   ACORDEÓN
+   ===================================================== */
+.accordion-button {
+    background-color: #111 !important;
+    color: #fff !important;
+    border: 1px solid #333;
+}
+.accordion-button:not(.collapsed) {
+    background-color: var(--paleta-azul-oscuro) !important;
+    color: #fff !important;
+}
+.accordion-button::after { filter: invert(1); }
+.accordion-body {
+    background-color: #0a0a0a;
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+/* =====================================================
+   FORMULARIO
+   ===================================================== */
+.form-control::placeholder, .form-select::placeholder { color: #888; }
+.form-control:focus, .form-select:focus {
+    background-color: #111;
+    color: #fff;
+    border-color: var(--paleta-naranja);
+    box-shadow: 0 0 0 0.25rem rgba(252, 113, 8, 0.25);
+}
+
+/* =====================================================
+   CARRUSELES BOOTSTRAP (CLASE ÚNICA)
+   ===================================================== */
+.carrusel-bs .carousel-inner {
+    background-color: #050505; /* Fondo oscuro para el hueco */
+    height: 500px;             /* Tope de altura de la caja */
+    border-radius: 8px;
+}
+
+.carrusel-bs .carousel-item,
+.carrusel-bs .carousel-item img {
+    height: 100%;
+    width: 100%;
+    /* 'contain' hace que la imagen quepa completa sin recortarse */
+    object-fit: contain;       
+}
+
+/* Ajuste para celulares */
+@media (max-width: 768px) {
+    .carrusel-bs .carousel-inner {
+        height: 300px;
+    }
+}

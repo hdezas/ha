@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Angel Hernández</title>
+    <link rel="icon" type="image/png" href="resources/HA.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white">
+
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-white py-3 sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#inicio">
+                <span class="text-naranja">Angel</span> Hernández
+            </a>
+            <button class="navbar-toggler border-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#trayectoria">Trayectoria</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header id="inicio" class="hero">
+        <div class="hero-imagen" style="background-image: url('resources/MJDSY.png');"></div>
+        <div class="hero-contenido container text-center">
+            <h1 class="display-3 fw-bold mb-3">
+                Bienvenido, soy <span class="text-naranja">Angel Hernández</span>
+            </h1>
+            <p class="lead mb-4">Portafolio creativo · Fotografía · Diseño gráfico </p>
+            <a href="#menu-vinilos" class="btn btn-outline-light rounded-pill px-4">Explorar portafolio</a>
+        </div>
+    </header>
+
+    <!-- MENÚ DE VINILOS -->
+    <section id="menu-vinilos" class="container my-5 py-5">
+        <h2 class="text-center fw-bold mb-5">Explora por categoría</h2>
+        <div class="row justify-content-center gy-5 gx-4">
+
+            <!-- Vinilo 1: Fotografía -->
+            <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center">
+                <a href="#fotografia" class="contenedor-vinilo" data-bs-toggle="modal" data-bs-target="#modalFotografia" aria-label="Abrir Fotografía">
+                    <img class="img-vinilo" src="resources/vinilo.png" alt="Disco vinilo">
+                    <div class="portada">
+                        <img class="img-portada" src="resources/HA_FOTO.png" alt="Portada Fotografía">
+                        <span class="etiqueta-portada">Fotografía</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Vinilo 2: Diseño Gráfico -->
+            <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center">
+                <a href="#diseno" class="contenedor-vinilo" data-bs-toggle="modal" data-bs-target="#modalDiseno" aria-label="Abrir Diseño Gráfico">
+                    <img class="img-vinilo" src="resources/vinilo.png" alt="Disco vinilo">
+                    <div class="portada">
+                        <img class="img-portada" src="resources/HA_DISEÑO.png" alt="Portada Diseño Gráfico">
+                        <span class="etiqueta-portada">Diseño Gráfico</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Vinilo 3: Modelado 3D -->
+            <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center">
+                <a href="#modelado" class="contenedor-vinilo" data-bs-toggle="modal" data-bs-target="#modalModelado" aria-label="Abrir Modelado 3D">
+                    <img class="img-vinilo" src="resources/vinilo.png" alt="Disco vinilo">
+                    <div class="portada">
+                        <img class="img-portada" src="resources/HA_3D.png" alt="Portada Modelado 3D">
+                        <span class="etiqueta-portada">Modelado 3D</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Vinilo 4: Proyectos Varios -->
+            <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center">
+                <a href="#varios" class="contenedor-vinilo" data-bs-toggle="modal" data-bs-target="#modalVarios" aria-label="Abrir Proyectos Varios">
+                    <img class="img-vinilo" src="resources/vinilo.png" alt="Disco vinilo">
+                    <div class="portada">
+                        <img class="img-portada" src="resources/HA_PROYECTOS.png" alt="Portada Proyectos Varios">
+                        <span class="etiqueta-portada">Proyectos Varios</span>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MODALES DE VINILOS CON CARRUSEL -->
+    <!-- Modal Fotografía -->
+    <div class="modal fade" id="modalFotografia" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark text-light border-secondary">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-naranja">Fotografía</h5>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-secondary mb-4">
+                        Fotografía artística y conceptual, experimentación con barridos y velocidades de obturación,
+                        revelado RAW, fotomontajes en Photoshop y cobertura de eventos, incluyendo actividades
+                        dentro del Museo JOVEM.
+                    </p>
+
+                    <div id="carouselFotografia" class="carousel slide carrusel-bs" data-bs-ride="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/MJ.JPG" class="d-block w-100" alt="Fotografía 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/LUZIA-6.JPG" class="d-block w-100" alt="Fotografía 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/CLAVE ALTA.jpg" class="d-block w-100" alt="Fotografía 3">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/LUZIA V2.jpg" class="d-block w-100" alt="Fotografía 4">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/MJ_3.JPG" class="d-block w-100" alt="Fotografía 5">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/LUZIA-9.JPG" class="d-block w-100" alt="Fotografía 6">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselFotografia" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselFotografia" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Diseño -->
+    <div class="modal fade" id="modalDiseno" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark text-light border-secondary">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-naranja">Diseño Gráfico</h5>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-secondary mb-4">
+                        Desarrollo de manuales de identidad de marca, composición gráfica, fotomontaje digital
+                        y póster promocional para cortometraje independiente.
+                    </p>
+                    <div id="carouselDiseno" class="carousel slide carrusel-bs" data-bs-ride="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/DOLCE.png" class="d-block w-100" alt="Diseño 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/DP_2.png" class="d-block w-100" alt="Diseño 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/DP_3.png" class="d-block w-100" alt="Diseño 3">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/EPDS.png" class="d-block w-100" alt="Diseño 4">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselDiseno" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselDiseno" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Modelado -->
+    <div class="modal fade" id="modalModelado" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark text-light border-secondary">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-naranja">Modelado 3D</h5>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-secondary mb-4">
+                        Nociones básicas de modelado tridimensional: escenarios y mundos digitales,
+                        personajes, materiales, iluminación y composición de escenas.
+                    </p>
+                    <div id="carouselModelado" class="carousel slide carrusel-bs" data-bs-ride="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/cafe.png" class="d-block w-100" alt="Render 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/MIKE.png" class="d-block w-100" alt="Render 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/minions.png" class="d-block w-100" alt="Render 3">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="resources/BUBBLES.png" class="d-block w-100" alt="Render 4">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="resources/MJDSY.png" class="d-block w-100" alt="Render 5">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselModelado" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselModelado" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Varios -->
+    <div class="modal fade" id="modalVarios" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark text-light border-secondary">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-naranja">Proyectos Varios</h5>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-secondary mb-4">Proyectos que no pertenecen directamente a las categorías anteriores.</p>
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+                        <div class="col">
+                            <div class="card h-100 bg-black border-secondary text-light">
+                                <img src="img/EHDLS.png" class="card-img-top" alt="El Hotel de las Sombras">
+                                <div class="card-body d-flex flex-column">
+                                    <h6 class="card-title text-naranja">El Hotel de las Sombras</h6>
+                                    <button class="btn btn-custom-outline mt-auto" data-bs-toggle="modal" data-bs-target="#modalHotel" data-bs-dismiss="modal">Ver detalles</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 bg-black border-secondary text-light">
+                                <img src="img/LLEGA.png" class="card-img-top" alt="LLEGA App">
+                                <div class="card-body d-flex flex-column">
+                                    <h6 class="card-title text-naranja">LLEGA</h6>
+                                    <button class="btn btn-custom-outline mt-auto" data-bs-toggle="modal" data-bs-target="#modalllega" data-bs-dismiss="modal">Ver detalles</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 bg-black border-secondary text-light">
+                                <img src="img/ISSTIDA.png" class="card-img-top" alt="ISSTIDA">
+                                <div class="card-body d-flex flex-column">
+                                    <h6 class="card-title text-naranja">ISSTIDA</h6>
+                                    <button class="btn btn-custom-outline mt-auto" data-bs-toggle="modal" data-bs-target="#modalIstia" data-bs-dismiss="modal">Ver detalles</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 bg-black border-secondary text-light">
+                                <img src="img/WIKI.png" class="card-img-top" alt="WIKI MJ">
+                                <div class="card-body d-flex flex-column">
+                                    <h6 class="card-title text-naranja">Wiki Michael Jackson</h6>
+                                    <button class="btn btn-custom-outline mt-auto" data-bs-toggle="modal" data-bs-target="#modalMJ" data-bs-dismiss="modal">Ver detalles</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODALES DE PROYECTOS ESPECÍFICOS -->
+    <div class="modal fade" id="modalHotel" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark text-light border-secondary">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-naranja">El Hotel de las Sombras</h5>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="img/EHDLS_2.png" class="img-fluid mb-3" alt="Hotel de las Sombras">
+                    <p>Proyecto de worldbuilding y storytelling enfocado en la creación de un universo narrativo para un escape room. Se desarrolló la ambientación, construcción del mundo, narrativa y elementos que forman parte de la experiencia.</p>
+                </div>
+                <div class="modal-footer border-secondary">
+                    <a href="https://view.genially.com/67ccdca5355051dc05b5fb2b" target="_blank" class="btn btn-custom-primary">Ver demo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalllega" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark text-light border-secondary">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-naranja">LLEGA</h5>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="img/LLEGA_FINAL.png" class="img-fluid mb-3" alt="LLEGA">
+                    <p>Concepto de una aplicación de delivery estudiantil, creada bajo la idea de conectar estudiantes con estudiantes. Incluye desarrollo de UX/UI: conceptualización, experiencia de usuario e interfaces.</p>
+                </div>
+                <div class="modal-footer border-secondary">
+                    <a href="https://www.figma.com/proto/8baindSEeM4q3c2i9nJKBS/Prototipo?node-id=7-3&p=f&t=j1mlXGjo1ZJ4q4f7-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=7%3A3" target="_blank" class="btn btn-custom-primary">Ver demo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalIstia" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark text-light border-secondary">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-naranja">ISSTIDA</h5>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="img/ISSTIDA_2.jpg" class="img-fluid mb-3" alt="ISTIDA">
+                    <p>Producción de un cortometraje independiente. Participación en el desarrollo del proyecto desde la etapa de preproducción. Actualmente en proceso de postproducción.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalMJ" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark text-light border-secondary">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-naranja">Wiki Michael Jackson</h5>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="img/WIKI_2.png" class="img-fluid mb-3" alt="Archivo musical MJ">
+                    <p>Canciones de Michael Jackson y algo más de datos curiosos. Realizado con HTML y CSS3. Busca unificar toda la información que se tiene en un solo lugar.</p>
+                </div>
+                <div class="modal-footer border-secondary">
+                    <a href="https://hdezas.github.io/mj_archivo/" target="_blank" class="btn btn-custom-primary">Ver demo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SOBRE MÍ -->
+    <section id="sobre-mi" class="seccion-con-fondo">
+        <div class="seccion-con-fondo-imagen" style="background-image: url('resources/MJDSY.png');"></div>
+        <div class="seccion-con-fondo-overlay"></div>
+        <div class="container position-relative py-5">
+            <div class="row align-items-center g-4">
+                <div class="col-12 col-md-5 text-center">
+                    <img src="resources/AH.jpg" alt="Foto de Ángel Hernández"
+                        class="img-fluid rounded-circle border border-4 border-secondary shadow-lg object-fit-cover"
+                        style="aspect-ratio: 1 / 1; width: 250px;">
+                </div>
+                <div class="col-12 col-md-7">
+                    <h2 class="fw-bold mb-3">Sobre mí</h2>
+                    <p class="text-secondary">
+                        Estudiante de quinto semestre de la Licenciatura en Creatividad Digital.
+                        Cuento con formación y experiencia académica en fotografía, diseño gráfico,
+                        modelado 3D y producción de proyectos audiovisuales y creativos.
+                    </p>
+                    <ul class="nav nav-pills mb-3" role="tablist">
+                        <li class="nav-item">
+                            <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#cv-prof" type="button">CV Profesional</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#cv-acad" type="button">CV Académico</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content border rounded p-3 border-secondary bg-black bg-opacity-75">
+                        <div class="tab-pane fade show active" id="cv-prof">
+                            <p class="small text-secondary mb-2">Experiencia en comunicación digital, cobertura de eventos y organización.</p>
+                            <a href="CV_Angel_Hernandez.pdf" class="btn btn-sm btn-outline-light">Descargar CV Profesional (PDF)</a>
+                        </div>
+                        <div class="tab-pane fade" id="cv-acad">
+                            <p class="small text-secondary mb-2">Historial de proyectos universitarios: Blender, Affinity y producción de cortometrajes.</p>
+                            <a href="CV_Academico_AH.pdf" class="btn btn-sm btn-outline-light">Descargar CV Académico (PDF)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRAYECTORIA -->
+    <section id="trayectoria" class="container py-5 mt-5">
+        <h2 class="text-center fw-bold mb-5">Experiencia y Formación</h2>
+        <div class="row">
+            <div class="col-md-9 mx-auto">
+                <div class="accordion accordion-flush" id="accordionExperiencia">
+                    <div class="accordion-item border-secondary bg-transparent">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUno">
+                                <strong>Licenciatura en Creatividad Digital</strong> &nbsp;| UdeG (Actualmente)
+                            </button>
+                        </h2>
+                        <div id="collapseUno" class="accordion-collapse collapse" data-bs-parent="#accordionExperiencia">
+                            <div class="accordion-body">
+                                Cursando en el Centro Universitario de Guadalajara. Proyectos integrales abordando programación front-end, diseño de interfaces (UI/UX), fotografía manual (RAW) y producción audiovisual.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-secondary bg-transparent">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDos">
+                                <strong>Asistente en Comunicación Digital</strong> &nbsp;| Museo Jovem
+                            </button>
+                        </h2>
+                        <div id="collapseDos" class="accordion-collapse collapse" data-bs-parent="#accordionExperiencia">
+                            <div class="accordion-body">
+                                Apoyo en estrategias de difusión, manejo de archivo fotográfico. Comunicación y mediación cultural.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-secondary bg-transparent">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTres">
+                                <strong>Diseño de Marca & Freelance</strong> &nbsp;| 2025 - Presente
+                            </button>
+                        </h2>
+                        <div id="collapseTres" class="accordion-collapse collapse" data-bs-parent="#accordionExperiencia">
+                            <div class="accordion-body">
+                                Creación de manuales de identidad visual (Dolce Pie) y construcción de interfaces web con HTML, CSS y Bootstrap 5.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO (Nativo con action mailto) -->
+    <section id="contacto" class="container py-5 mt-5">
+        <h2 class="text-center fw-bold mb-4">Contáctame</h2>
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <form action="mailto:angelhdezsal1011@gmail.com" method="post" enctype="text/plain">
+                    <div class="form-floating mb-3">
+                        <input type="text" name="Nombre" class="form-control bg-dark text-light border-secondary" id="nombreInput" placeholder="Tu nombre" required>
+                        <label for="nombreInput">Nombre completo</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" name="Correo" class="form-control bg-dark text-light border-secondary" id="correoInput" placeholder="nombre@ejemplo.com" required>
+                        <label for="correoInput">Correo electrónico</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <select name="Asunto" class="form-select bg-dark text-light border-secondary" id="asuntoSelect" required>
+                            <option value="" selected disabled>Selecciona un asunto</option>
+                            <option value="Oportunidad laboral / Freelance">Oportunidad laboral / Freelance</option>
+                            <option value="Proyecto colaborativo">Proyecto colaborativo</option>
+                            <option value="Duda o comentario">Duda o comentario</option>
+                        </select>
+                        <label for="asuntoSelect">Asunto</label>
+                    </div>
+                    <div class="form-floating mb-4">
+                        <textarea name="Mensaje" class="form-control bg-dark text-light border-secondary" placeholder="Deja tu mensaje aquí" id="mensajeTexto" style="height: 120px" required></textarea>
+                        <label for="mensajeTexto">Mensaje</label>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-custom-primary btn-lg px-5">Enviar Mensaje</button>
+                        <p class="text-muted small mt-2 mb-0">Se abrirá tu aplicación de correo predeterminada.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black border-top border-secondary text-light py-4 mt-5">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <div class="mb-3 mb-md-0 small text-muted">
+                &copy; 2026 Angel Hernández. Todos los derechos reservados. 67
+            </div>
+            <ul class="nav">
+                <li class="nav-item"><a href="#" class="nav-link text-muted px-2">GitHub</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-muted px-2">LinkedIn</a></li>
+                <li class="nav-item"><a href="#contacto" class="nav-link text-muted px-2">Correo</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
